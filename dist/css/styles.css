@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.start-screen, .game-container {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.start-screen button, .game-info {
+    margin-bottom: 20px;
+}
+
+.target {
+    width: 190px;
+    height: 190px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    user-select: none; /* Impede a seleção de texto */
+    position: absolute;
+}
+
+.target.clicked {
+    animation: targetClickAnimation 0.3s ease;
+}
+
+@keyframes targetClickAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.score, .timer, .high-score {
+    user-select: none; /* Impede a seleção de texto */
+}
